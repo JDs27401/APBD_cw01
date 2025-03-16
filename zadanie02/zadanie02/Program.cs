@@ -4,13 +4,16 @@
 //this is the 2nd change to the project
 //this is the 3rd and last change to the project
 
-int getMax(int[] ints) {
-    int max = int.MinValue;
+double getAvg(int[] ints) {
+    int sum = 0;
     foreach (int i in ints) {
-        if (i > max) max = i; 
+        sum += i;
     }
-    return max;
+    double avg = sum / ints.Length;
+    Console.WriteLine(avg);
+    return avg;
 }
 
-int[] arr = {1, 2, 4, 3,};
-Console.WriteLine(getMax(arr));
+int[] arr = {1, 2, 3,};
+
+Console.WriteLine(getAvg(arr));
