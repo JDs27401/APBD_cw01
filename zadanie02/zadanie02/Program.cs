@@ -4,7 +4,17 @@ Console.WriteLine("Hello, World!");
 //this is the 2nd change to the project
 //this is the 3rd and last change to the project
 
-double GetAvg(int[] ints)
+double getAvg(int[] ints)
 {
-    return 0;
+    int sum = 0;
+    foreach (int i in ints) {
+        sum += i;
+    }
+    double avg = sum / ints.Length;
+    Console.WriteLine(avg);
+    return avg;
 }
+
+int[] arr = {1, 2, 3,};
+
+double arrAvg = getAvg(arr);
